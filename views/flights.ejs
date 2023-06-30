@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin.css">
+    <title>Flights</title>
+    <style type="text/css">
+        table,
+        td,
+        th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .flights {
+            border-collapse: collapse;
+            width: 50%;
+            text-align: center;
+        }
+        .flights input {
+            text-align: center;
+            width: 80%;
+            height: 40px;
+            margin: 10px;
+        }
+
+        .table-data {
+            position: relative;
+            left: 50px;
+            top: 50px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li class="item"><a href="/user">Home</a></li>
+                <li class="item"><a href="/user/bookTicket">Book Flight Ticket</a></li>
+                <li class="item"><a href="/user/contact-input">My Bookings</a></li>
+                <li class="item"><a href="/user/flights">Avaialable Flights</a></li>
+                <li class="item"><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="flights">
+            <input type="text" id="myInput" placeholder="Search Flights" onkeyup="searchFun()">
+            <table id="myTable">
+                <thead style="font-size: 18px; font-weight: 900;">
+                
+                    <th>Airline</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Flight Number</th>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                    <th>Seats</th>
+                </thead>
+                
+                <%x.forEach((y)=>{%>
+                    <tr>
+                        <td>
+                            <%=y.airline%>
+                        </td>
+                        <td>
+                            <%=y.source%>
+                        </td>
+                        <td>
+                            <%=y.destination%>
+                        </td>
+                        <td>
+                            <%=y.flightNumber%>
+                        </td>
+                        <td>
+                            <%=y.departure%>
+                        </td>
+                        <td>
+                            <%=y.arrival%>
+                        </td>
+                        <td>
+                            <%=y.seats%>
+                        </td>
+                    </tr>
+                    <%x})%>
+            </table>
+            <form action="/user/flights" method="get" id="showBtn" onclick="renderFun()">
+                <button type="submit">Show All</button>
+            </form>
+        </div>
+
+    </section>
+    <script>
+        const renderFun = () => {
+            let path = window.location.pathname;
+            console.log(path);
+            if (window.location.pathname === "/admin/flights") {
+                document.getElementById("showBtn").style.display = "none";
+            } else {
+                document.getElementById("showBtn").style.display = "";
+            }
+        }
+        const searchFun = () => {
+            let filter = document.getElementById('myInput').value.toUpperCase();
+
+            let myTable = document.getElementById('myTable');
+            let tr = myTable.getElementsByTagName('tr');
+
+            for (var i = 0; i < tr.length; i++) {
+                let td = tr[i].getElementsByTagName('td')[0];
+
+                if (td) {
+                    let textValue = td.textContent || td.innerHTML;
+                    if (textValue.toUpperCase().indexOf(filter) > - 1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

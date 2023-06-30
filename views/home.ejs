@@ -1,0 +1,26 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flight Ticket Booking</title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <h1>Flight Ticket Booking</h1>
+
+  <form action="/search" method="/post" id="searchForm">
+    <label for="source">Source:</label>
+    <input type="text" id="source" name="source" required>
+
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" name="destination" required>
+
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="results"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

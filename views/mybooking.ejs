@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/user.css">
+    <title>My Booking</title>
+    <style type="text/css">
+        table,
+        td,
+        th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+
+        }
+
+        .table-data {
+            position: relative;
+            left: 50px;
+            top: 50px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li class="item"><a href="/user">Home</a></li>
+                <li class="item"><a href="/user/bookTicket">Book Flight Ticket</a></li>
+                <li class="item"><a href="/user/contact-input">My Bookings</a></li>
+                <li class="item"><a href="/user/flights">Avaialable Flights</a></li>
+                <li class="item"><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="mybooking">
+            <table>
+                <tr>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Flight Number</th>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                </tr>
+                <%x.forEach((y)=>{%>
+                    <tr>
+                        <td>
+                            <%=y.source%>
+                        </td>
+                        <td>
+                            <%=y.destination%>
+                        </td>
+                        <td>
+                            <%=y.flightNumber%>
+                        </td>
+                        <td>
+                            <%=y.departure%>
+                        </td>
+                        <td>
+                            <%=y.arrival%>
+                        </td>
+                    </tr>
+                    <%x})%>
+
+
+            </table>
+        </div>
+    </section>
+</body>
+
+</html>

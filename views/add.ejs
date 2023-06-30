@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li class="item"><a href="/admin">Home</a></li>
+                <li class="item"><a href="">Add Flights</a></li>
+                <li class="item"><a href="/admin/remove">Remove Flights</a></li>
+                <li class="item"><a href="/admin/booked">Booked Flights</a></li>
+                <li class="item"><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <form action="/admin/add" method="post" id="addFlight">
+            <h2>Add Flight By One Click!</h2>
+            <input type="text" name="airline" placeholder="Airline" required>
+            <input type="text" id="source" name="source" placeholder="Source" required>
+            <input type="text" name="destination" placeholder="Destination" required>
+            <input type="number" name="flightNumber" placeholder="Flight Number" required>
+            <input type="text" name="departure" placeholder="Departure Time" required>
+            
+            <input type="text" name="arrival" placeholder="Arrival Time" required>
+            <input type="number" name="seats" placeholder="Number Of Seats">
+            <br>
+            <button type="submit">Add Flight</button>
+        </form>
+    </section>
+</body>
+
+</html>

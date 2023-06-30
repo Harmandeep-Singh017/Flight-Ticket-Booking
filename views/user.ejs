@@ -1,0 +1,39 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flight Ticket Booking</title>
+    <link rel="stylesheet" href="/user.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li class="item"><a href="/user">Home</a></li>
+                <li class="item"><a href="/user/bookTicket">Book Flight Ticket</a></li>
+                <li class="item"><a href="/user/contact-input">My Bookings</a></li>
+                <li class="item"><a href="/user/flights">Avaialable Flights</a></li>
+                <li class="item"><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div  class="card">
+            <h2 style="margin: 8px;">Welcome User!</h2>
+            <div class="search-bar">
+                <form action="/user/search" method="post">
+                    <i class="fa fa-search"></i>
+                    <input type="text" name="source" placeholder="Enter Source"
+                    >
+                    <input type="text" name="destination" id="search-item" placeholder="Enter Destination"
+                    >
+                    <button type="submit">Search For Me..</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li class="item"><a href="/admin">Home</a></li>
+                <li class="item"><a href="/admin/add">Add Flights</a></li>
+                <li class="item"><a href="">Remove Flights</a></li>
+                <li class="item"><a href="/admin/booked">Booked Flights</a></li>
+                <li class="item"><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" style="border: none;">
+        <form action="/admin/remove" method="post" id="removeFlight">
+            <h2>Remove By One Click!</h2>
+            <input type="number" name="flightNumber" placeholder="Flight Number" required>
+            <button type="submit">Remove Flight</button>
+        </form>
+        </div>
+</body>
+
+</html>

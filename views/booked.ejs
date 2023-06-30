@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin.css">
+    <title>Booked Flights</title>
+    <style type="text/css">
+        table,
+        td,
+        th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+
+        }
+
+        .table-data {
+            position: relative;
+            left: 50px;
+            top: 50px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+        }
+        .card-body {
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li class="item"><a href="">Home</a></li>
+                <li class="item"><a href="/admin/add">Add Flights</a></li>
+                <li class="item"><a href="/admin/remove">Remove Flights</a></li>
+                <li class="item"><a href="/admin/booked">Booked Flights</a></li>
+                <li class="item"><a href="/">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="home">
+        <div class="container-fluid">
+            <div class="col-lg-12">
+                    <h1 style="text-align: center; margin: 10px;">Booked Flights List</h1>
+                <div class="card-body">
+                    <table class="table table-bordered" id="flight-list">
+                        <thead>
+                            <tr>
+                                <th>Contact</th>
+                                <th>Source</th>
+                                <th>Destination</th>
+                                <th>Flight Number</th>
+                                <th>Departure</th>
+                                <th>Arrival</th>
+                                <th>Seats</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%x.forEach((y)=>{%>
+                                <tr>
+                                    <td>
+                                        <%=y.contact%>
+                                    </td>
+                                    <td>
+                                        <%=y.source%>
+                                    </td>
+                                    <td>
+                                        <%=y.destination%>
+                                    </td>
+                                    <td>
+                                        <%=y.flightNumber%>
+                                    </td>
+                                    <td>
+                                        <%=y.departure%>
+                                    </td>
+                                    <td>
+                                        <%=y.arrival%>
+                                    </td>
+                                    <td>
+                                        <%=y.seatCount%>
+                                    </td>
+                                </tr>
+                                <%x})%>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
