@@ -1,15 +1,14 @@
 {
-  "name": "online-flight-booking-system",
+  "name": "online-flight-booking",
   "version": "1.0.0",
   "description": "Online Flight Booking Website",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "netlify deploy --prod"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "Online-Flight-Booking-System"
+    "url": "Online-Flight-Booking"
   },
   "keywords": [
     "Backend"
@@ -27,9 +26,6 @@
     "express-session": "^1.17.3",
     "method-override": "^3.0.0",
     "mongoose": "^7.3.0",
-    "netlify-cli": "^15.8.0",
-    "netlify-lambda": "^2.0.16",
-    "serverless-http": "^3.2.0",
     "url": "^0.11.1"
   }
 }
