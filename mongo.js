@@ -12,13 +12,6 @@ const connectDB = async ()=> {
         process.exit(1);
     }
 }
-/*mongoose.connect(url)
-.then(()=>{
-    console.log('mongoose connected');
-})
-.catch((e)=>{
-    console.log('failed');
-})*/
 
 const logInSchema = new mongoose.Schema({
     name: String,
@@ -57,6 +50,7 @@ const FlightList = new mongoose.model('flightList',flightListSchema, 'FlightList
 const bookedList = new mongoose.model('bookingList',bookSchema, 'bookedList')
 
 module.exports = {
+    connectDB: connectDB,
     FlightList: FlightList,
     LogInCollection: LogInCollection,
     bookedList: bookedList
