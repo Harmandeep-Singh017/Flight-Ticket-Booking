@@ -1,10 +1,9 @@
-require('dotenv').config();
 const
     express = require("express"),
     alert = require("alert"),
     path = require("path"),
     app = express(),
-    { FlightList, LogInCollection, bookedList } = require("./mongo.js"),
+    {connectDB, FlightList, LogInCollection, bookedList } = require("./mongo.js"),
     bodyParser = require('body-parser'),
     port = process.env.PORT || 3000,
     hostname = '127.0.0.1',
@@ -261,6 +260,10 @@ app.post('/user/contact-input', async (req, res) => {
     }
 })
 
-app.listen(port, () => {
-    console.log(`port connected at : http://${hostname}:${port}`);
-});
+
+
+connectDB().then(() => {
+    app.listen(port, () => {
+        console.log(`port connected at : http://${hostname}:${port}`);
+    });
+})
