@@ -24,7 +24,7 @@ const logInSchema = new mongoose.Schema({
     name: String,
     password: String, 
     role: String
-},{collection: 'LoginFormPractice'});
+});
 
 const flightListSchema = new mongoose.Schema({
     airline: String,
@@ -37,7 +37,7 @@ const flightListSchema = new mongoose.Schema({
         type: Number,
         default: 60,
     }
-}, {collection: 'LoginFormPractice'});
+});
 
 const bookSchema = new mongoose.Schema({
     source: String,
@@ -49,7 +49,7 @@ const bookSchema = new mongoose.Schema({
         type: Number,
     },
     contact: Number
-}, {collection: 'LoginFormPractice'});
+});
 
 
 const LogInCollection = new mongoose.model('Login',logInSchema, 'LogInCollection')
