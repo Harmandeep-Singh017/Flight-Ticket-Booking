@@ -8,20 +8,19 @@
     <link rel="stylesheet" href="/login.css">
 </head>
 <body>
-    <h1>Login Form</h1>
-
-    <form action="/login" method="post" >
-        <input placeholder="Name" name="name" type="text">
-        <br>
-        <input placeholder="Password" name="password" type="password">
-        <br>
-        <input placeholder="Admin Or User" name="role" type="text">
-        <br>
-        <input class="sub" type="submit">
-        <br>
-        <a href="/signup">Create a new account</a>
-    </form>
-
-    
+    <div class="formDiv">
+        <form action="/login" method="post">
+            <h1>Login Form</h1>
+            <input placeholder="Name" name="name" type="text">
+            <br>
+            <input placeholder="Password" name="password" type="password">
+            <br>
+            <input placeholder="Admin Or User" name="role" type="text">
+            <br>
+            <button type="submit"><span></span>Submit</button>
+            <br>
+            <a href="/signup">Create a new account</a>
+        </form>    
+    </div>
 </body>
 </html>
