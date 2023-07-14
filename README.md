@@ -2,7 +2,7 @@
 
 Link: https://fair-teal-deer-wear.cyclic.app
 
-Flight Ticket Booking Application using HTML, CSS, JavaScript, NodeJs, ExpressJs and MongoDB. Create a web application for flight ticket booking. Use any tech stack for the backend and db.
+Flight Ticket Booking Application using HTML, CSS, NodeJs, ExpressJs and MongoDB. Create a web application for flight ticket booking. Use any tech stack for the backend and db.
 
 Type of Users 
 a. User 
