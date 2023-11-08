@@ -36,10 +36,13 @@ app.use(express.static(publicPath))
 
 
 // Routes
+app.get('/', (req, res) => {
+    res.render('index')
+})
 app.get('/signup', (req, res) => {
     res.render('signup')
 })
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
     res.render('login')
 })
 app.get('/home', (req, res) => {
@@ -157,10 +160,10 @@ app.post('/admin/add', async (req, res) => {
         const results = await FlightList.find().sort({ flightNumber: 'asc' }).exec();
         res.render("admin")
     } catch (error) {
-        console.error('Error retrieving documents:', error);
+        console.error('Error retrieving documents:', error); 
         res.status(404).send()
     }
-});
+}); 
 
 
 //Deleting Flight From FlightList
